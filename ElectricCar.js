@@ -6,6 +6,26 @@ class ElectricCar extends Car{
         super(this.regNr,this.brand,this.model,this.year,this.numOfDoors)
     }
 
+    calculateDanishGreenFee(){
+        let price;
+        const whPrKm = getWhPrKm(); 
+        const kmPrL = Math.round(100 / (whPrKm / 91.25) + 0.05);
+        
+        if(kmPrL >= 20 && kmPrL < 50){
+            price = 330;
+        } else if(kmPrL >= 15 && kmPrL < 20){
+            price = 1050;
+        }else if(kmPrLL >= 10 && kmPrL < 15){
+            price = 2340;
+        } else if(kmPrL >= 5 && kmPrL < 10){
+            price = 5500;
+        }else{
+            price = 10470;
+        }
+        console.log('the price for the electric car is: ', price);
+        return price;
+    }
+
     get kwh() {
         return this._kwh;
       }

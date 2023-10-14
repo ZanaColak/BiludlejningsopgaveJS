@@ -1,3 +1,5 @@
+//Abstract class
+
 class Car{
 constructor(regNr, brand, model, year, numOfDoors){
     this.regNr = regNr;
@@ -6,6 +8,11 @@ constructor(regNr, brand, model, year, numOfDoors){
     this.year = year;
     this.numOfDoors = numOfDoors
 }
+
+calculateDanishGreenFee(){
+//The method is abstract
+}
+
   get regNr() {
     return this._regNr;
   }
